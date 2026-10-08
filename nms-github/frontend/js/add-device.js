@@ -1,0 +1,1 @@
+form.onsubmit=async e=>{e.preventDefault();try{await api('/api/devices',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({device_name:name.value,device_type:type.value,ip_address:ip.value,location:location.value,description:desc.value})});location='devices.html'}catch(e){msg.textContent=e.message}}

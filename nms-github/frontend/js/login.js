@@ -1,0 +1,1 @@
+f.onsubmit=async e=>{e.preventDefault();const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({email:email.value,password:password.value})});const d=await r.json();if(r.ok)location='dashboard.html';else m.textContent=d.error}

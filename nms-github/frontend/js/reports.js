@@ -1,0 +1,1 @@
+(async()=>{const s=await api('/api/dashboard/summary');report.innerHTML=`<h2>Total Devices: ${s.total}</h2><h2>Online: ${s.online}</h2><h2>Offline: ${s.offline}</h2><h2>Active Alerts: ${s.active_alerts}</h2>`})()

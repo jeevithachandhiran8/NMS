@@ -1,0 +1,1 @@
+async function api(url,opt={}){const r=await fetch(url,{credentials:'include',...opt});if(r.status===401){location='login.html';throw Error('Login required')}const d=await r.json();if(!r.ok)throw Error(d.error||'Request failed');return d}async function logout(){await fetch('/api/auth/logout',{method:'POST',credentials:'include'});location='login.html'}

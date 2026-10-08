@@ -1,0 +1,1 @@
+(async()=>{const s=await api('/api/dashboard/summary');t.textContent=s.total;o.textContent=s.online;f.textContent=s.offline;a.textContent=s.active_alerts;const d=await api('/api/dashboard/chart');new Chart(chart,{type:'line',data:{labels:d.map(x=>x.label),datasets:[{label:'Response ms',data:d.map(x=>x.response_time)}]}})})()
